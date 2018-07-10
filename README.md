@@ -2,13 +2,20 @@ This is a basic program that I created while I am teaching myself C#.  Its a bas
 I encountered a couple of issues while making this program.
 
 Issue one was creating a Dictionary.  
-  I had this "Dictionary<string, string> students = new Dictionary<string, string>();"
-  This is correct syntax however I was still getting an error.  I learned that I had to use  using System.Collections.Generic; at the top inorder to create a dictionary.
+  I had this    
+    
+     "Dictionary<string, string> students = new Dictionary<string, string>();"
+      
+This is correct syntax however I was still getting an error.  I learned that I had to use  using System.Collections.Generic; at the top inorder to create a dictionary.
   
-  Issue two was that I didn't know how to do a foreach loop and display the students inside the dictionary.  The solution is this foreach(KeyValuePair<string,string>student in students){
-                    Console.WriteLine("Student ={0},Grade ={1}",student.Key,student.Value);.
+  Issue two was that I didn't know how to do a foreach loop and display the students inside the dictionary.  
+  The solution is this       
+  
+      foreach(KeyValuePair<string,string>student in students){
+      Console.WriteLine("Student ={0},Grade ={1}",student.Key,student.Value);.
                     
-     I wanted to make an infinate loop so people would be able to add as many students as they wanted to.  I first did 
+   I wanted to make an infinate loop so people would be able to add as many students as they wanted to.  I first did 
+            
             do{Console.WriteLine("would you like to add a kid");
             var answer = Console.ReadLine();
             if (answer == "yes"){
@@ -30,4 +37,5 @@ Issue one was creating a Dictionary.
                     break;
                 
             }}
-            that would fix the error.  
+           
+ that would fix the error.  
